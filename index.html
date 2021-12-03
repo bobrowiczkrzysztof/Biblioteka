@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteka</title>
+  </head>
+  <body>
+    <div id="container">
+      <form onSubmit="addData(event);">
+        <div class="form">
+        Tytuł książki <input type="text" id="tytul" minlength="1" required />
+      </div>
+      <div class="form">
+        Autor książki <input type="text" id="autor" minlength="3" required />
+      </div>
+      <div class="form">
+        Priorytet przeczytania <input type="number" name="" id="priorytet" min="1" max="5" required />        
+      </div>
+        <div class="form">
+          Kategoria
+        <select id="kategoria" required>
+          Kategoria
+          <option name="Romans">Romans</option>
+          <option name="Horror">Horror</option>
+          <option name="Komedia">Komedia</option>
+        </select>
+        </div>
+      </div>
+      <input type="submit" name="fds" value="Dodaj książkę"></input>
+      <input type="button" value="Usuń localstorage" onClick="deleteData();">
+    </form>
+      <table id="table" border="1">
+        <tr>
+          <th>Tytuł</th>
+          <th>Autor</th>
+          <th>Priorytet</th>
+          <th>Kategoria</th>
+        </tr>
+      </table>
+      
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
